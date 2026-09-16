@@ -72,6 +72,62 @@ Administrators can:
 - Monitor issue status
 - View management statistics
 
+## 🔄 Issue Management Workflow
+Student Reports Issue
+          │
+          ▼
+     Issue Created
+          │
+          ▼
+   Admin Reviews Issue
+          │
+          ▼
+   Assign Staff Member
+          │
+          ▼
+    Staff Works on Issue
+          │
+          ▼
+    Update Issue Status
+          │
+          ▼
+       Issue Resolved
+          │
+          ▼
+     Student Notified
+     
+## 🛠️ Technology Stack
+
+Frontend:
+
+-React.js
+-JavaScript
+-Tailwind CSS
+-HTML5
+-CSS3
+
+Backend:
+
+-Node.js
+-Express.js
+-REST API
+
+Development:
+
+-Git
+-GitHub
+-VS Code
+-npm
+
+Deployment:
+
+-Netlify – Frontend
+-Render – Backend
+-Future Database
+
+The architecture is prepared for database integration such as:
+
+MongoDB
 ---
 
 ## 🏗️ System Architecture
@@ -104,52 +160,6 @@ Administrators can:
                     │      DATABASE     │
                     │ Future Integration│
                     └───────────────────┘
-## 🔄 Issue Management Workflow
-Student Reports Issue
-          │
-          ▼
-     Issue Created
-          │
-          ▼
-   Admin Reviews Issue
-          │
-          ▼
-   Assign Staff Member
-          │
-          ▼
-    Staff Works on Issue
-          │
-          ▼
-    Update Issue Status
-          │
-          ▼
-       Issue Resolved
-          │
-          ▼
-     Student Notified
-## 🛠️ Technology Stack
-Frontend
-React.js
-JavaScript
-Tailwind CSS
-HTML5
-CSS3
-Backend
-Node.js
-Express.js
-REST API
-Development
-Git
-GitHub
-VS Code
-npm
-Deployment
-Netlify – Frontend
-Render – Backend
-Future Database
 
-The architecture is prepared for database integration such as:
-
-MongoDB
 PostgreSQL
 MySQL
