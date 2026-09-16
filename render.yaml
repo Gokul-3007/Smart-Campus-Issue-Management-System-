@@ -1,0 +1,47 @@
+services:
+  - type: web
+    name: smart-campus-backend
+    root_dir: backend
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: DB_NAME
+        value: smart-campus
+      - key: CORS_ORIGIN
+        sync: false
+      - key: JWT_ACCESS_SECRET
+        sync: false
+      - key: JWT_REFRESH_SECRET
+        sync: false
+      - key: AWS_REGION
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_S3_BUCKET
+        sync: false
+
+  - type: static
+    name: smart-campus-frontend
+    root_dir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
+    envVars:
+      # Set this to the deployed backend URL, for example:
+      # https://smart-campus-backend.onrender.com
+      - key: VITE_API_BASE_URL
+        sync: false
+
+# Required Render dashboard values after creating the services:
+# - Backend MONGO_URI: MongoDB Atlas connection string.
+# - Backend CORS_ORIGIN: the deployed frontend URL.
+# - Frontend VITE_API_BASE_URL: the deployed backend URL.
